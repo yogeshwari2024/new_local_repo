@@ -1,0 +1,149 @@
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo
+$ git init
+Initialized empty Git repository in C:/Users/User/Practice/new_local_repo/.git/
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ ls -a
+./  ../  .git/
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ touch steps.txt
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        steps.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git add .
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   steps.txt
+
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git commit -m "steps info need to be add"
+[master (root-commit) e7fdee1] steps info need to be add
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 steps.txt
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git remote add origin https://github.com/yogeshwari2024/new_local_repo.git
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git remote -v
+origin  https://github.com/yogeshwari2024/new_local_repo.git (fetch)
+origin  https://github.com/yogeshwari2024/new_local_repo.git (push)
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git branch
+* master
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git branch -M main
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git branch
+* main
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git push origin main
+To https://github.com/yogeshwari2024/new_local_repo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/yogeshwari2024/new_local_repo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git fetch origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 893 bytes | 81.00 KiB/s, done.
+From https://github.com/yogeshwari2024/new_local_repo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git pull origin main
+From https://github.com/yogeshwari2024/new_local_repo
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git remote add origin https://github.com/yogeshwari2024/new_local_repo.git
+error: remote origin already exists.
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git remote -v
+origin  https://github.com/yogeshwari2024/new_local_repo.git (fetch)
+origin  https://github.com/yogeshwari2024/new_local_repo.git (push)
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git branch
+* main
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git push origin main
+To https://github.com/yogeshwari2024/new_local_repo.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/yogeshwari2024/new_local_repo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (main)
+$ git branch -M master
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git branch
+* master
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/yogeshwari2024/new_local_repo.git'
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 230 bytes | 230.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/yogeshwari2024/new_local_repo/pull/new/master
+remote:
+To https://github.com/yogeshwari2024/new_local_repo.git
+ * [new branch]      master -> master
+
+User@DESKTOP-GE2J38Q MINGW64 ~/Practice/new_local_repo (master)
